@@ -1,15 +1,38 @@
 <div align="center">
+<figure aria-label="ASCII art logo for LiveCollab ">
+<pre>
 
-# 🚀 DevComp
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║  ██╗     ██╗██╗   ██╗███████╗ ██████╗ ██████╗ ██╗     ██╗      █████╗ ██████╗  ║
+║  ██║     ██║██║   ██║██╔════╝██╔════╝██╔═══██╗██║     ██║     ██╔══██╗██╔══██╗ ║
+║  ██║     ██║██║   ██║█████╗  ██║     ██║   ██║██║     ██║     ███████║██████╔╝ ║
+║  ██║     ██║╚██╗ ██╔╝██╔══╝  ██║     ██║   ██║██║     ██║     ██╔══██║██╔══██╗ ║
+║  ███████╗██║ ╚████╔╝ ███████╗╚██████╗╚██████╔╝███████╗███████╗██║  ██║██████╔╝ ║
+║  ╚══════╝╚═╝  ╚═══╝  ╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝  ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+</pre>
+</figure>
 
-**An Engineer-First Real-time Collaborative Code Editor & Development Environment**
 
-[![GitHub](https://img.shields.io/badge/github-repo-blue?style=for-the-badge&logo=github)](https://github.com/Rakesh2901)
-[![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white)](https://socket.io/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+**An Engineer-First, Real-Time Collaborative Code Editor & Development Environment**
 
-*High-performance web IDE with bi-directional real-time syncing, integrated execution engine, and built-in team communication.*
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Release](https://img.shields.io/badge/release-v0.1.0-blue.svg)]()
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Status](https://img.shields.io/badge/Status-Active%20Development-orange.svg)]()
+
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#key-features">Key Features</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#license">License</a>
+</p>
 
 </div>
 
