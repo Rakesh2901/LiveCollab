@@ -5,29 +5,31 @@ import { Server } from "socket.io";
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname = "localhost";
-const port = parseInt(process.env.PORT || "3000", 10);
-// when using middleware `hostname` and `port` must be provided below
-const app = next({ dev, hostname, port });
-const handle = app.getRequestHandler();
+const defaultPort = parseInt(process.env.PORT || "3000", 10);
 
-app.prepare().then(() => {
-    const httpServer = createServer((req, res) => {
-        const parsedUrl = parse(req.url!, true);
-        handle(req, res, parsedUrl);
-    });
+const startServer = (port: number) => {
+    // when using middleware `hostname` and `port` must be provided below
+    const app = next({ dev, hostname, port });
+    const handle = app.getRequestHandler();
 
-    const io = new Server(httpServer, {
-        cors: {
-            origin: "*",
-            methods: ["GET", "POST"],
-        },
-    });
+    app.prepare().then(() => {
+        const httpServer = createServer((req, res) => {
+            const parsedUrl = parse(req.url!, true);
+            handle(req, res, parsedUrl);
+        });
 
-    // Store room state
-    // rooms: { [roomId]: { files: {...}, users: { [socketId]: { name, color } } } }
-    const rooms = new Map();
+        const io = new Server(httpServer, {
+            cors: {
+                origin: "*",
+                methods: ["GET", "POST"],
+            },
+        });
 
-    io.on("connection", (socket) => {
+        // Store room state
+        // rooms: { [roomId]: { files: {...}, users: { [socketId]: { name, color } } } }
+        const rooms = new Map();
+
+        io.on("connection", (socket) => {
         console.log("Client connected:", socket.id);
 
         socket.on("join-room", (payload) => {
@@ -157,12 +159,21 @@ app.prepare().then(() => {
         });
     });
 
-    httpServer
-        .once("error", (err) => {
-            console.error(err);
-            process.exit(1);
-        })
-        .listen(port, () => {
-            console.log(`> Ready on http://${hostname}:${port}`);
-        });
-});
+        httpServer
+            .once("error", (err: NodeJS.ErrnoException) => {
+                if (err.code === "EADDRINUSE" && !process.env.PORT) {
+                    const nextPort = port + 1;
+                    console.warn(`Port ${port} is busy. Retrying on http://${hostname}:${nextPort}...`);
+                    startServer(nextPort);
+                    return;
+                }
+                console.error(err);
+                process.exit(1);
+            })
+            .listen(port, () => {
+                console.log(`> Ready on http://${hostname}:${port}`);
+            });
+    });
+};
+
+startServer(defaultPort);
