@@ -43,7 +43,7 @@
 - [End-to-End User & Data Flow](#-end-to-end-user--data-flow)
 - [Core Engineering Features](#-core-engineering-features)
 - [Deep Dive: Project Structure](#-deep-dive-project-structure)
-- [Local Setup & Deployment](#-local-setup--deployment)
+- [Local Setup & Deployment](#local-setup-deployment)
 - [Visual Gallery](#-visual-gallery)
 
 ---
@@ -163,6 +163,7 @@ LiveCollab/
 
 ---
 
+<a id="local-setup-deployment"></a>
 ## 🛠️ Local Setup & Deployment
 
 ### Prerequisites
@@ -196,14 +197,10 @@ npm start # Runs NODE_ENV=production tsx server.ts
 ## 📸 Visual Gallery
 
 ### Application Interface
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8de7ac5c-0197-4370-8a6e-2747f14885b8" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7d259b08-6a71-4fee-aca1-faf9a0eb5bc1" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/84816052-9d90-468b-89c2-ae6e2c16c9f4" />
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/6e3c0d5d-3e82-4f6c-91ac-6da9e159501b" />
-
+<img width="1920" height="1080" alt="image" src="public\Images\Screenshot 2026-08-15 053729.png" />
 ### Code Editor in Action
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da247eab-9449-47fa-b140-3ee2a64536b8" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b2fb5a6d-f753-41ff-b64d-4e4b8fa70166" />
+<img width="1920" height="1080" alt="image" src="public\Images\Screenshot 2026-08-15 053434.png" />
+<img width="1920" height="1080" alt="image" src="public\Images\Screenshot 2026-08-15 053604.png" />
 
 ---
 
