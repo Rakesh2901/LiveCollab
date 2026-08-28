@@ -13,8 +13,8 @@ interface LanguageSelectorProps {
 const languages = [
     { id: 'javascript', name: 'JavaScript', icon: 'JS', color: 'text-yellow-400', bg: 'bg-yellow-400/10 border-yellow-400/20' },
     { id: 'python', name: 'Python', icon: 'PY', color: 'text-blue-400', bg: 'bg-blue-400/10 border-blue-400/20' },
-    { id: 'java', name: 'Java', icon: 'JV', color: 'text-red-400', bg: 'bg-red-400/10 border-red-400/20' },
-    { id: 'cpp', name: 'C++', icon: 'C++', color: 'text-purple-400', bg: 'bg-purple-400/10 border-purple-400/20' },
+    { id: 'java', name: 'Java', icon: 'J', color: 'text-red-400', bg: 'bg-red-400/10 border-red-400/20' },
+    { id: 'cpp', name: 'C++', icon: 'C++', color: 'text-green-400', bg: 'bg-purple-400/10 border-purple-400/20' },
 ];
 
 export default function LanguageSelector({ language, setLanguage }: LanguageSelectorProps) {
@@ -24,8 +24,8 @@ export default function LanguageSelector({ language, setLanguage }: LanguageSele
     return (
         <div className="relative">
             <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.85 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 transition-colors group"
             >

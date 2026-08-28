@@ -52,12 +52,20 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#050505]/70 backdrop-blur-xl">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <Code2 className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white">
-            LiveCollab
-          </span>
+          <button type="button"
+                  onClick={() => {}}
+                  className="group flex items-center gap-3 rounded-xl p-2 transition-all duration-200 hover:bg-white/10 active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+                  aria-label="LiveCollab Home">
+      {/* App Icon */}
+      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-blue-600 shadow-lg shadow-indigo-500/20 transition-transform duration-150 group-hover:scale-115">
+        <Code2 className="h-5 w-5 text-white" />
+      </div>
+
+      {/* Brand Text */}
+      <span className="text-xl font-bold tracking-tight text-white">
+        LiveCollab
+      </span>
+    </button>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -70,11 +78,11 @@ export default function Home() {
             target="_blank"
             className="hidden sm:flex text-zinc-400 hover:text-white transition-colors text-sm font-medium"
           >
-            Star on GitHub
+            GitHub
           </a>
           <button
             onClick={createRoom}
-            className="px-4 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-zinc-200 transition-colors"
+            className="px-4 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-[#00cf5a] transition-all ease-out active:scale-90 duration-200 hover:scale-[1.05]"
           >
             Get Started
           </button>
@@ -98,7 +106,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              v2.0 is now live: Real-time Cursors & Cloud Execution
+              v2.0 Under Work: Real-time Cursors & Cloud Execution
               <ArrowRight className="w-3 h-3 ml-1" />
             </motion.div>
 
@@ -218,8 +226,8 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             <div className="flex items-center gap-2 text-lg font-bold text-white"><Globe className="w-5 h-5" /> Global Scale</div>
             <div className="flex items-center gap-2 text-lg font-bold text-white"><Shield className="w-5 h-5" /> Enterprise Secure</div>
-            <div className="flex items-center gap-2 text-lg font-bold text-white"><Cpu className="w-5 h-5" /> 99.9% Uptime</div>
-            <div className="flex items-center gap-2 text-lg font-bold text-white"><Zap className="w-5 h-5" /> &lt;50ms Latency</div>
+            <div className="flex items-center gap-2 text-lg font-bold text-white"><Cpu className="w-5 h-5" /> 90% {'<'} Uptime</div>
+            <div className="flex items-center gap-2 text-lg font-bold text-white"><Zap className="w-5 h-5" /> Blazing Fast</div>
           </div>
         </section>
 
