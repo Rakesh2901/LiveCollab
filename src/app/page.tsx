@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Code2, Users, ArrowRight, Zap, Shield, Globe, Laptop,
   GraduationCap, Briefcase, ChevronDown, Check, Sparkles,
-  GitBranch, Terminal, Play, Share2, Command, Cpu
+  GitBranch, Terminal, Play, Share2, Command, Cpu,
+  SquareChevronRight
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -52,17 +53,23 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#050505]/70 backdrop-blur-xl">
         <div className="flex items-center gap-2">
-          <button type="button"
-                  onClick={() => {}}
-                  className="group flex items-center gap-3 rounded-xl p-2 transition-all duration-200 hover:bg-white/10 active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-                  aria-label="LiveCollab Home">
-      {/* App Icon */}
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-blue-600 shadow-lg shadow-indigo-500/20 transition-transform duration-150 group-hover:scale-115">
-        <Code2 className="h-5 w-5 text-white" />
+          <button
+      type="button"
+      onClick={() => {}}
+      className="group flex items-center gap-0 rounded-2xl px-4 py-2 cursor-pointer"
+      aria-label="LiveCollab Home"
+    >
+      {/* Centered Logo Icon */}
+      <div className="relative flex h-11 w-11 shrink-0 items-center justify-center">
+        <img
+          src="/Livecollab.svg"
+          alt="LiveCollab logo"
+          className="relative z-10 h-8 w-8 object-contain"
+        />
       </div>
 
       {/* Brand Text */}
-      <span className="text-xl font-bold tracking-tight text-white">
+      <span className="text-2xl font-bold tracking-tight text-white -ml-1">
         LiveCollab
       </span>
     </button>
@@ -168,7 +175,7 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/20"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500/20"></div>
                 </div>
-                <div className="text-xs text-zinc-600 font-mono">LiveCollab.io/room/demo</div>
+                <div className="text-xs text-zinc-600 font-mono">LiveCollab/demo</div>
                 <div className="w-16"></div>
               </div>
 
@@ -360,10 +367,14 @@ export default function Home() {
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
-                  <Code2 className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden">
+                  <img
+                    src="/Livecollab.svg"
+                    alt="LiveCollab logo"
+                    className="w-6 h-6 object-contain select-none"
+                  />
                 </div>
-                <span className="text-xl font-bold text-white">LiveCollab</span>
+                <span className="text-xl font-bold text-white justify-center items-center">LiveCollab</span>
               </div>
               <p className="text-zinc-500 text-sm mb-6">
                 Redefining how developers collaborate. Built for the modern web.
@@ -404,7 +415,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-6xl mx-auto mt-20 pt-8 border-t border-white/5 text-center text-zinc-600 text-sm">
-            &copy; 2026 LiveCollab Platform.
+            &copy; Crafted with ❤️ in Jaipur
           </div>
         </footer>
 

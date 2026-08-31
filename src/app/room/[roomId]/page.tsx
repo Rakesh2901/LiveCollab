@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import CodeEditor from '../../../components/CodeEditor';
 import { useSocket } from '../../../hooks/useSocket';
-import { Terminal, Play, Share2, Users, Loader2, Code2, Monitor, Box, Sparkles, Command, Sidebar as SidebarIcon, Moon, Sun, PenTool } from 'lucide-react';
+import { Terminal, Play, Share2, Users, Loader2, Code2, Monitor, Box, Sparkles, Command, Sidebar as SidebarIcon, Moon, Sun, PenTool, SquareChevronRight } from 'lucide-react';
 import { executeCode } from '../../../lib/piston';
 import { cn } from '../../../lib/utils';
 import Sidebar from '../../../components/Sidebar';
@@ -253,12 +253,15 @@ export default function RoomPage() {
                     <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 rounded-lg hover:bg-white/5 text-zinc-400 hover:text-white transition-colors">
                         <SidebarIcon className="w-5 h-5" />
                     </button>
-                    <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                            <Code2 className="w-5 h-5 text-white" />
+                    <a href="/" className="flex items-center gap-0">
+                        <div className="relative flex h-11 w-11 shrink-0 items-center justify-center">
+                            <img
+                            src="/Livecollab.svg"
+                            alt="LiveCollab logo"
+                            className="relative z-8 h-6 w-6 object-contain"
+                            />
                         </div>
-                        <span className="font-bold text-sm tracking-tight text-white/90">LiveCollab</span>
-                    </a>
+                    <span className="font-bold text-sm items-center justify-center text-white -ml-2">LiveCollab</span></a>
 
                     <div className="h-6 w-px bg-white/10 mx-2 hidden md:block" />
 
