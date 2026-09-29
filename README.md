@@ -134,35 +134,6 @@ Built with **Tailwind CSS v4** and **Framer Motion**:
 
 ---
 
-## 📁 Deep Dive: Project Structure
-
-```text
-LiveCollab/
-├── src/
-│   ├── app/
-│   │   ├── page.tsx              # Landing page component
-│   │   ├── room/[roomId]/page.tsx# Core room engine (initializes socket)
-│   │   ├── layout.tsx            # Global metadata and providers
-│   │   └── globals.css           # Tailwind v4 injection
-│   ├── components/
-│   │   ├── CodeEditor.tsx        # Monaco wrapper with socket sync logic
-│   │   ├── Chat.tsx              # Real-time WebSocket chat layer
-│   │   ├── Whiteboard.tsx        # 2D Canvas context controller
-│   │   ├── Sidebar.tsx           # Virtual file tree state manager
-│   │   ├── LanguageSelector.tsx  # Piston API language parser mapping
-│   │   └── ThemeSelector.tsx     # Context-aware theme injector
-│   ├── hooks/
-│   │   └── useSocket.ts          # Singleton pattern for Socket.io-client
-│   └── lib/
-│       ├── utils.ts              # clsx + tailwind-merge utilities
-│       └── piston.ts             # Piston API execution wrapper
-├── server.ts                     # The Heart: Custom Node/Express/Socket server
-├── package.json                  # Dependencies (tsx, next, socket.io)
-└── tsconfig.json                 # Strict TypeScript configuration
-```
-
----
-
 <a id="local-setup-deployment"></a>
 ## 🛠️ Local Setup & Deployment
 
@@ -178,10 +149,8 @@ cd LiveCollab
 
 # Install standard dependencies
 npm install
-
-# Run the custom server (DO NOT use 'next dev' directly)
-npm run LiveCollab
-# Under the hood, this runs: `tsx server.ts`
+#Run
+npm run dev
 ```
 
 ### Production Build
@@ -189,7 +158,7 @@ Because of the custom server, standard Vercel deployments (which enforce serverl
 
 ```bash
 npm run build
-npm start # Runs NODE_ENV=production tsx server.ts
+npm start 
 ```
 
 ---

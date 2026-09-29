@@ -66,7 +66,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/Rakesh2901/LiveCollab"
             target="_blank"
             className="hidden sm:flex text-zinc-400 hover:text-white transition-colors text-sm font-medium"
           >
