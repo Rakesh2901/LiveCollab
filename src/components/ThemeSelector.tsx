@@ -11,9 +11,9 @@ interface ThemeSelectorProps {
 }
 
 const themes = [
-    { id: 'vs-dark', name: 'VS Dark', icon: <Moon className="w-3.5 h-3.5" />, color: 'text-indigo-400', bg: 'bg-indigo-400/10 border-indigo-400/20' },
-    { id: 'vs-light', name: 'VS Light', icon: <Sun className="w-3.5 h-3.5" />, color: 'text-yellow-400', bg: 'bg-yellow-400/10 border-yellow-400/20' },
-    { id: 'hc-black', name: 'High Contrast', icon: <MonitorSmartphone className="w-3.5 h-3.5" />, color: 'text-zinc-400', bg: 'bg-zinc-400/10 border-zinc-400/20' },
+    { id: 'vs-dark', name: 'Dark', icon: <Moon className="w-3.5 h-3.5" />, color: 'text-green-400', bg: 'bg-black border-indigo-400/20' },
+    { id: 'vs-light', name: 'VS Light', icon: <Sun className="w-3.5 h-3.5" />, color: 'text-black', bg: 'bg-white border-red-400/20' },
+    { id: 'hc-black', name: 'High Contrast', icon: <MonitorSmartphone className="w-3.5 h-3.5" />, color: 'text-yellow-400', bg: 'bg-zinc-400/10 border-zinc-400/20' },
 ];
 
 export default function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
@@ -23,8 +23,8 @@ export default function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
     return (
         <div className="relative">
             <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.85 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 transition-colors group"
             >

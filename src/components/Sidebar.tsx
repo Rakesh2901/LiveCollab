@@ -31,10 +31,11 @@ const getFileIcon = (fileName: string) => {
         case 'py':
             return <span className="text-blue-300 font-bold text-[10px] w-3.5 text-center">PY</span>;
         case 'java':
-            return <span className="text-red-400 font-bold text-[10px] w-3.5 text-center">JV</span>;
+            return <span className="text-red-500 font-bold text-[10px] w-3.5 text-center">J</span>;
         case 'cpp':
+            return <span className="text-green-500 font-bold text-[10px] w-3.5 text-center">C++</span>;
         case 'c':
-            return <span className="text-purple-400 font-bold text-[10px] w-3.5 text-center">C++</span>;
+            return <span className="text-purple-400 font-bold text-[10px] w-3.5 text-center">C</span>;
         case 'html':
             return <span className="text-orange-400 font-bold text-[10px] w-3.5 text-center">&lt;&gt;</span>;
         case 'css':

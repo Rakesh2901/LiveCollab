@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Code2, Users, ArrowRight, Zap, Shield, Globe, Laptop,
   GraduationCap, Briefcase, ChevronDown, Check, Sparkles,
-  GitBranch, Terminal, Play, Share2, Command, Cpu
+  GitBranch, Terminal, Play, Share2, Command, Cpu,
+  SquareChevronRight
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -52,12 +53,26 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#050505]/70 backdrop-blur-xl">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <Code2 className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white">
-            LiveCollab
-          </span>
+          <button
+      type="button"
+      onClick={() => {}}
+      className="group flex items-center gap-0 rounded-2xl px-4 py-2 cursor-pointer"
+      aria-label="LiveCollab Home"
+    >
+      {/* Centered Logo Icon */}
+      <div className="relative flex h-11 w-11 shrink-0 items-center justify-center">
+        <img
+          src="/Livecollab.svg"
+          alt="LiveCollab logo"
+          className="relative z-10 h-8 w-8 object-contain"
+        />
+      </div>
+
+      {/* Brand Text */}
+      <span className="text-2xl font-bold tracking-tight text-white -ml-1">
+        LiveCollab
+      </span>
+    </button>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -70,11 +85,11 @@ export default function Home() {
             target="_blank"
             className="hidden sm:flex text-zinc-400 hover:text-white transition-colors text-sm font-medium"
           >
-            Star on GitHub
+            GitHub
           </a>
           <button
             onClick={createRoom}
-            className="px-4 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-zinc-200 transition-colors"
+            className="px-4 py-2 rounded-lg bg-white text-black text-sm font-bold hover:bg-[#00cf5a] transition-all ease-out active:scale-90 duration-200 hover:scale-[1.05]"
           >
             Get Started
           </button>
@@ -98,7 +113,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              v2.0 is now live: Real-time Cursors & Cloud Execution
+              v2.0 Under Work: Real-time Cursors & Cloud Execution
               <ArrowRight className="w-3 h-3 ml-1" />
             </motion.div>
 
@@ -160,7 +175,7 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/20"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500/20"></div>
                 </div>
-                <div className="text-xs text-zinc-600 font-mono">LiveCollab.io/room/demo</div>
+                <div className="text-xs text-zinc-600 font-mono">LiveCollab/demo</div>
                 <div className="w-16"></div>
               </div>
 
@@ -218,8 +233,8 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             <div className="flex items-center gap-2 text-lg font-bold text-white"><Globe className="w-5 h-5" /> Global Scale</div>
             <div className="flex items-center gap-2 text-lg font-bold text-white"><Shield className="w-5 h-5" /> Enterprise Secure</div>
-            <div className="flex items-center gap-2 text-lg font-bold text-white"><Cpu className="w-5 h-5" /> 99.9% Uptime</div>
-            <div className="flex items-center gap-2 text-lg font-bold text-white"><Zap className="w-5 h-5" /> &lt;50ms Latency</div>
+            <div className="flex items-center gap-2 text-lg font-bold text-white"><Cpu className="w-5 h-5" /> 90% {'<'} Uptime</div>
+            <div className="flex items-center gap-2 text-lg font-bold text-white"><Zap className="w-5 h-5" /> Blazing Fast</div>
           </div>
         </section>
 
@@ -352,10 +367,14 @@ export default function Home() {
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
-                  <Code2 className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden">
+                  <img
+                    src="/Livecollab.svg"
+                    alt="LiveCollab logo"
+                    className="w-6 h-6 object-contain select-none"
+                  />
                 </div>
-                <span className="text-xl font-bold text-white">LiveCollab</span>
+                <span className="text-xl font-bold text-white justify-center items-center">LiveCollab</span>
               </div>
               <p className="text-zinc-500 text-sm mb-6">
                 Redefining how developers collaborate. Built for the modern web.
@@ -396,7 +415,7 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-6xl mx-auto mt-20 pt-8 border-t border-white/5 text-center text-zinc-600 text-sm">
-            &copy; 2026 LiveCollab Platform. Use responsibly.
+            &copy; Crafted with ❤️ in Jaipur
           </div>
         </footer>
 
